@@ -3,8 +3,8 @@
 require_once( get_template_directory() . '/lib/init.php' );
 
 /** Child theme (do not remove) */
-define( 'CHILD_THEME_NAME', 'Chikorita157 Child Theme' );
-define( 'CHILD_THEME_URL', 'http://chikorita157.com' );
+define( 'CHILD_THEME_NAME', 'Anime Blog Community Theme' );
+define( 'CHILD_THEME_URL', 'https://github.com/chikorita157/anime-blog-community-theme' );
 /** Remove Generator **/
 remove_action('wp_head', 'wp_generator');
 /** Add Viewport meta tag for mobile browsers */
@@ -17,7 +17,7 @@ function add_viewport_meta_tag() {
 add_custom_background();
 
 /** Add support for custom header */
-add_theme_support( 'genesis-custom-header', array( 'width' => 960, 'height' => 100 ) );
+add_theme_support( 'genesis-custom-header', array( 'width' => 960, 'height' => 240 ) );
 
 /** Add support for 3-column footer widgets */
 add_theme_support( 'genesis-footer-widgets', 3 );
@@ -123,6 +123,7 @@ function custom_comment_form_args($args) {
     return $args;
 }
 
+
 add_filter( 'genesis_comment_list_args', 'child_comment_list_args' );
 /**
  * Take the existing arguments, and one that specifies a custom comments.
@@ -163,7 +164,7 @@ function child_list_comments( $comment, $args, $depth ) {
 
 		<div class="comment-meta commentmetadata">
 			<a href="<?php echo esc_url( get_comment_link( $comment->comment_ID ) ); ?>"><?php printf( __( '%1$s at %2$s', 'genesis' ), get_comment_date(), get_comment_time() ); ?></a>
-			<?php if (function_exists('comment_counter'))  {comment_counter('email','&bull; <span class="comment-counter">Magical Level: ','</span> ');} ?>
+			<?php if (function_exists('comment_counter'))  {comment_counter('email','&bull; <span class="comment-counter">Comments: ','</span> ');} ?>
 			<?php edit_comment_link( __( 'Edit', 'genesis' ), g_ent( '&bull; ' ), '' ); ?>
 		</div><!-- end .comment-meta -->
 
@@ -200,7 +201,7 @@ function child_ping_list_args( $args ) {
     $args['callback'] = 'child_list_pings';
     return $args;
 }
- 
+
 /**
  * Build how the trackbacks / pings will look.
  *

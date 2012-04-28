@@ -1,7 +1,7 @@
 /*
-    Theme Name: Chikorita157 Child Theme
-	Theme URI: http://chikorita157.com
-	Description: Default Network Theme
+    Theme Name: Anime Blog Community Theme
+	Theme URI: https://github.com/chikorita157/anime-blog-community-theme
+	Description: Theme mostly for Anime Blogs
     Author: Chikorita157
     Author URI: http://www.chikorita157.com/
  
@@ -65,7 +65,7 @@
 /* Import Fonts
 ------------------------------------------------------------ */
 
-@import url(http://fonts.googleapis.com/css?family=Oswald);
+@import url(http://fonts.googleapis.com/css?family=PT+Sans:400italic,400,700,700italic);
 
 
 /* Defaults
@@ -84,7 +84,7 @@ p,
 select,
 textarea {
 	color: #333;
-	font-family: "Helvetica Neue", Arial, Helvetica, sans-serif;
+	font-family: "PT Sans", "Helvetica Neue", Arial, Helvetica, sans-serif;
 	font-size: 16px;
 	font-weight: 300;
 	line-height: 1.5625;
@@ -111,7 +111,7 @@ label,
 select,
 textarea {
 	color: #333;
-	font-family: "Helvetica Neue", Arial, Helvetica, sans-serif;
+	font-family: "PT Sans", "Helvetica Neue", Arial, Helvetica, sans-serif;
 	font-size: 14px;
 	font-weight: 300;
 }
@@ -183,7 +183,7 @@ body {
 
 #header {
 	margin: 0 auto;
-	min-height: 100px;
+	min-height: 240px;
 	width: 100%;
 }
 
@@ -195,7 +195,8 @@ body {
 }
 
 #title {
-	font-family: 'Oswald', arial, serif;
+	font-family: 'PT Sans', arial, serif;
+	font-weight: bold;
 	font-size: 36px;
 	line-height: 1.25;
 	margin: 0;
@@ -682,7 +683,7 @@ h3,
 h4,
 h5,
 h6 {
-	font-family: 'Oswald', arial, serif;
+	font-family: "PT Sans", arial, serif;
 	line-height: 1.25;
 	margin: 0 0 10px;
 }
@@ -704,7 +705,7 @@ h2 a:visited {
 h2 a,
 h2 a:visited {
 	color: #333;
-	font-family: 'Oswald', arial, serif;
+	font-family: "PT Sans", arial, serif;
 }
 
 h2 a:hover {
