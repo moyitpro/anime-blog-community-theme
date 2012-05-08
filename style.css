@@ -1,9 +1,9 @@
 /*
-    Theme Name: Anime Blog Community Theme
-	Theme URI: https://github.com/chikorita157/anime-blog-community-theme
-	Description: Theme mostly for Anime Blogs
-    Author: Chikorita157
-    Author URI: http://www.chikorita157.com/
+    Theme Name: Template Name Here
+    Theme URI: https://github.com/chikorita157/anime-blog-community-theme
+    Description: Description
+    Author: Your Name Here
+    Author URI: http://www.youraddresshere.com/
  
     Version: 1.8
  
@@ -104,6 +104,7 @@ textarea,
 .wp-caption {
 	background-color: #f5f5f5;
 	border: 1px solid #ddd;
+	border-radius: 4px;
 }
 
 input,
@@ -259,28 +260,26 @@ body {
 .menu-primary,
 .menu-secondary,
 #header .menu {
-	background-color: #f5f5f5;
+	background: #222; /* Show a solid color for older browsers */
+	background: -moz-linear-gradient(#252525, #0a0a0a);
+	background: -o-linear-gradient(#252525, #0a0a0a);
+	background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#252525), to(#0a0a0a)); /* older webkit syntax */
+	background: -webkit-linear-gradient(#252525, #0a0a0a);
+	-webkit-box-shadow: rgba(0, 0, 0, 0.4) 0px 1px 2px;
+	-moz-box-shadow: rgba(0, 0, 0, 0.4) 0px 1px 2px;
+	box-shadow: rgba(0, 0, 0, 0.4) 0px 1px 2px;
 	clear: both;
-	color: #333;
+	color: #fff;
 	font-size: 14px;
 	margin: 0 auto;
 	overflow: hidden;
+	padding: 2px 0 2px 0;
 	width: 100%;
 }
 
 #header .menu {
-	border: 1px solid #ddd;
 	box-sizing: border-box;
-}
-
-.menu-primary {
-	border-bottom: 1px solid #ddd;
-	border-top: 1px solid #ddd;
-}
-
-.menu-secondary {
-	border-bottom: 1px solid #ddd;
-	border-top: none;
+	border-radius: 4px;
 }
 
 .menu-primary ul,
@@ -300,8 +299,7 @@ body {
 .menu-primary a,
 .menu-secondary a,
 #header .menu a {
-	border-right: 1px solid #ddd;
-	color: #333;
+	color: #fff;
 	display: block;
 	padding: 7px 15px 6px;
 	position: relative;
@@ -323,8 +321,12 @@ body {
 #header .menu .current_page_item a,
 #header .menu .current-cat a,
 #header .menu .current-menu-item a {
-	background-color: #fff;
-	color: #333;
+background: #f9f9f9; /* Show a solid color for older browsers */
+background: -moz-linear-gradient(#f9f9f9, #e5e5e5);
+background: -o-linear-gradient(#f9f9f9, #e5e5e5);
+background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#f9f9f9), to(#e5e5e5)); /* Older webkit syntax */
+background: -webkit-linear-gradient(#f9f9f9, #e5e5e5);
+color: #373737;
 }
 
 .menu-primary li li a,
@@ -340,7 +342,7 @@ body {
 	background-color: #fff;
 	border: 1px solid #ddd;
 	border-top: none;
-	color: #333;
+	color: #000;
 	font-size: 12px;
 	padding: 9px 10px 8px;
 	position: relative;
@@ -407,13 +409,7 @@ ul.menu li.sfHover ul,
 .menu li a .sf-sub-indicator,
 .menu li li a .sf-sub-indicator,
 .menu li li li a .sf-sub-indicator {
-	background: url(images/icon-plus.png) no-repeat;
-	height: 16px;
-	position: absolute;
-	right: 8px;
-	text-indent: -9999px;
-	top: 10px;
-	width: 16px;
+	display: none;
 }
 
 #wpadminbar li:hover ul ul {
@@ -443,7 +439,7 @@ ul.menu li.sfHover ul,
 }
 
 .menu li.search {
-	padding: 0 10px;
+	padding: 0 30px;
 }
 
 .menu li.rss a {
@@ -959,6 +955,7 @@ p.wp-caption-text {
 .navigation li a:hover,
 .navigation li.active a {
 	border: 1px solid #ddd;
+	border-radius: 4px;
 	padding: 5px 8px;
 }
 
@@ -999,6 +996,7 @@ p.wp-caption-text {
 .sidebar .widget {
 	background-color: #fff;
 	border: 1px solid #ddd;
+	border-radius: 2px;
 	margin: 0 0 15px;
 	padding: 0 0 15px;
 }
@@ -1084,25 +1082,53 @@ p.wp-caption-text {
 
 /* Buttons
 ------------------------------------------------------------ */
-
-input[type="button"],
 input[type="submit"],
-button {
-	background: url(images/gradient.png) 0 0;
-	border: 1px solid #ccc;
-	cursor: pointer;
-	line-height: 19px;
-	padding: 5px 7px;
-	text-decoration: none;
+div.gform_footer input.button,
+button,
+.enews #subbutton,
+.reply a,
+.reply a:visited,
+.searchsubmit,
+.likebutton,
+#submit {
+	background: #222 url(/images/alert-overlay.png) repeat-x;
+    border: 0px;
+    display: inline-block;
+    padding: 5px 10px 6px !important;
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    line-height: 1;
+    border-radius: 5px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.5);
+    text-shadow: 0 -1px 1px rgba(0,0,0,0.25);
+    border-bottom: 1px solid rgba(0,0,0,0.25);
+    position: relative;
+    cursor: pointer !important;
 }
 
-input:hover[type="button"],
-input:hover[type="submit"],
-button:hover {
-	background: url(images/gradient.png) 0 -33px;
-	text-decoration: none;
+input[type="submit"]:hover,
+div.gform_footer input.button:hover,
+button:hover,
+.enews #subbutton:hover,
+.reply a:hover,
+.searchsubmit:hover,
+.likebutton:hover,
+#submit:hover {
+    background-color: #666;
+    cursor: pointer !important;
+    color: #fff;
 }
-
+input[type="submit"]:active,
+div.gform_footer input.button:active,
+button:active,
+.enews #subbutton:active,
+.reply a:active,
+.searchsubmit:active,
+.likebutton:active,
+#submit:active {
+    top: 1px;
+}
 
 /* Search Form
 ------------------------------------------------------------ */
@@ -1118,11 +1144,11 @@ button:hover {
 
 .s {
 	margin: 10px -7px 0 0;
-	padding: 6px 5px;
+	padding: 5px 4px;
 	width: 180px;
 }
 .searchsubmit {
-display: none;
+display: none !important;
 }
 
 #nav .s {
@@ -1277,13 +1303,13 @@ display: none;
 }
 
 #footer .gototop {
-	float: left;
+	float: right;
+	display: none;
 	width: 200px;
 }
 
 #footer .creds {
-	float: right;
-	text-align: right;
+	float: left;
 	width: 650px;
 }
 
@@ -1374,6 +1400,7 @@ display: none;
 .depth-1,
 .even {
 	border: 1px solid #ddd;
+	border-radius: 2px;
 }
 
 
@@ -1583,6 +1610,7 @@ div.gform_wrapper .gform_footer {
 	.sidebar .widget,
 	.taxonomy-description {
 		margin: 0 20px 20px;
+		border-radius: 4px;
 	}
 	
 	#content {

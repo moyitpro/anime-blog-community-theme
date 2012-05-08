@@ -38,6 +38,13 @@ function child_do_doctype() {
 <meta http-equiv="Content-Type" content="<?php bloginfo( 'html_type' ); ?>; charset=<?php bloginfo( 'charset' ); ?>" />
 <?php
 }
+/* Footer Text */
+add_filter('genesis_footer_creds_text', 'custom_footer_creds_text');
+function custom_footer_creds_text($creds) {
+ $creds = "[footer_copyright first='2009'] Blog Title Here. Powered by [footer_wordpress_link].";
+ return  $creds;
+}
+
 /**
  * Adds separate comment and trackback counts
  */
